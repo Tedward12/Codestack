@@ -1,0 +1,20 @@
+.hero-image {
+    background-image: url("../images/camaro.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-content{
+    right: 150px;
+    position: absolute;
+    
+    bottom: 50px;
+}
+a{
+    font-size: 30px;
+    border-bottom: 5px solid red;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
