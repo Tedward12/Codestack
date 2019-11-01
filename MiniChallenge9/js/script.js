@@ -49,77 +49,8 @@ function studentInfo(info) {
 
 let studentNum = 0;
 
-firstBtn.addEventListener('click', function (e) {
-    clear();
-    studentNum = 1;
-    setTimeout(() => {
-        slideRight();
-        firstNameText.innerText = studentsObj[studentNum - 1].firstName;
-        lastNameText.innerText = studentsObj[studentNum - 1].lastName;
-        nicknameText.innerText = studentsObj[studentNum - 1].nickName;
-        emailText.innerText = studentsObj[studentNum - 1].email;
-        slackNameText.innerText = studentsObj[studentNum - 1].slack;
-        hobbyText.innerText = studentsObj[studentNum - 1].hobbies;
-        contactText.innerText = studentsObj[studentNum - 1].contact;
-    }, 20);
-});
-
-lastBtn.addEventListener('click', function (e) {
-    clear();
-    studentNum = 23;
-    setTimeout(() => {
-        slideRight();
-        firstNameText.innerText = studentsObj[studentNum - 1].firstName;
-        lastNameText.innerText = studentsObj[studentNum - 1].lastName;
-        nicknameText.innerText = studentsObj[studentNum - 1].nickName;
-        emailText.innerText = studentsObj[studentNum - 1].email;
-        slackNameText.innerText = studentsObj[studentNum - 1].slack;
-        hobbyText.innerText = studentsObj[studentNum - 1].hobbies;
-        contactText.innerText = studentsObj[studentNum - 1].contact;
-    }, 20);
-});
-
-prevBtn.addEventListener('click', function (e) {
-    clear();
-    if (studentNum == 1 || studentNum==0) {
-        studentNum = 24;
-    }
-    studentNum--;
-    setTimeout(() => {
-        slideRight();
-        firstNameText.innerText = studentsObj[studentNum - 1].firstName;
-        lastNameText.innerText = studentsObj[studentNum - 1].lastName;
-        nicknameText.innerText = studentsObj[studentNum - 1].nickName;
-        emailText.innerText = studentsObj[studentNum - 1].email;
-        slackNameText.innerText = studentsObj[studentNum - 1].slack;
-        hobbyText.innerText = studentsObj[studentNum - 1].hobbies;
-        contactText.innerText = studentsObj[studentNum - 1].contact;
-    }, 20);
-});
-
-nextBtn.addEventListener('click', function (e) {
-    clear();
-    if (studentNum == 23) {
-        studentNum = 0;
-    }
-    studentNum++;
-    setTimeout(() => {
-        slideRight();
-        firstNameText.innerText = studentsObj[studentNum - 1].firstName;
-        lastNameText.innerText = studentsObj[studentNum - 1].lastName;
-        nicknameText.innerText = studentsObj[studentNum - 1].nickName;
-        emailText.innerText = studentsObj[studentNum - 1].email;
-        slackNameText.innerText = studentsObj[studentNum - 1].slack;
-        hobbyText.innerText = studentsObj[studentNum - 1].hobbies;
-        contactText.innerText = studentsObj[studentNum - 1].contact;
-    }, 20);
-});
-
 randomBtn.addEventListener('click', function (e) {
-    clear();
     studentNum = RandomNum();
-    setTimeout(() => {
-        slideRight();
         firstNameText.innerText = studentsObj[studentNum - 1].firstName;
         lastNameText.innerText = studentsObj[studentNum - 1].lastName;
         nicknameText.innerText = studentsObj[studentNum - 1].nickName;
@@ -127,31 +58,10 @@ randomBtn.addEventListener('click', function (e) {
         slackNameText.innerText = studentsObj[studentNum - 1].slack;
         hobbyText.innerText = studentsObj[studentNum - 1].hobbies;
         contactText.innerText = studentsObj[studentNum - 1].contact;
-    }, 20);
 });
 
 function RandomNum() {
     let rNum = 0;
     rNum = Math.trunc(Math.random() * 23);
     return rNum;
-}
-
-function clear() {
-    firstNameText.className = "white";
-    lastNameText.className = "white";
-    nicknameText.className = "white";
-    slackNameText.className = "white";
-    emailText.className = "white";
-    hobbyText.className = "white";
-    contactText.className = "white";
-}
-
-function slideRight() {
-    firstNameText.className = "white slideRight";
-    lastNameText.className = "white slideRight";
-    nicknameText.className = "white slideRight";
-    slackNameText.className = "white slideRight";
-    emailText.className = "white slideRight";
-    hobbyText.className = "white slideRight";
-    contactText.className = "white slideRight";
 }
