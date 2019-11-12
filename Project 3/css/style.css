@@ -1,0 +1,10 @@
+.background{
+    background-image: url(../assets/epic-seven-background.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.bgWhite{background-color: white;}
+
+.size35{font-size: 35px;}
+.mt-100{margin-top: 100px;}
