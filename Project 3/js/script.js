@@ -2,6 +2,9 @@
 
 let injectValue = document.getElementById('inject');
 let totalScore = 0;
+let totalQuestions = 20;
+let tQuestions = [];
+
 
 //----------injecting HTML Pages-----------//
 
@@ -88,18 +91,36 @@ function loadOptionsPage(info) {
     });
 }
 
+//------------------------------------- Get Random Questions -------------------------------------//
+
+function randomQuestions(q){
+    //q is triviaQFull
+    let qNum = 0;
+    let rQuestions = [];
+
+    for(let i=0; i<totalQuestions; i++)
+    {
+        //SHUFFLE
+        qNum = Math.floor(Math.random()*q.length);
+        //console.log(qNum);
+        //add from eq! json array to triviaQ
+        rQuestions.push(q[qNum]);
+        //Remove the item from ezQ
+        q.splice(qNum,1);
+    }
+    return rQuestions;
+}
+
 //------------------------------------- Load Easy Page -------------------------------------//
 
 function loadEasyPage(info) {
     injectValue.innerHTML = info;
 
-    let incorrect = 0;
-    let totalQuestions = 20;
-    let tQuestions = [];
     let diff = '../data/data.json';
     let qNum = 0;
     let timer = 15;
     let interval;
+    let triviaQ = [];
 
 
     let correct = document.getElementById('correct');
@@ -129,8 +150,8 @@ function loadEasyPage(info) {
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 tQuestions = JSON.parse(this.responseText).questions;
-                console.log(tQuestions);
-                interval = setInterval(updateTime, 1000)
+                interval = setInterval(updateTime, 1000);
+                triviaQ = randomQuestions(tQuestions);
                 loadQuestion();
             }
         };
@@ -143,19 +164,16 @@ function loadEasyPage(info) {
         counter.className = "size35 col-4 bgWhite d-flex justify-content-center";
         correct.className = "size35 col-4 bgWhite d-flex justify-content-center mb-0";
 
-        questions.innerText = tQuestions[qNum].q;
-        a1.innerText = tQuestions[qNum].a1;
-        a2.innerText = tQuestions[qNum].a2;
-        a3.innerText = tQuestions[qNum].a3;
-        a4.innerText = tQuestions[qNum].a4;
+        questions.innerText = triviaQ[qNum].q;
+        a1.innerText = triviaQ[qNum].a1;
+        a2.innerText = triviaQ[qNum].a2;
+        a3.innerText = triviaQ[qNum].a3;
+        a4.innerText = triviaQ[qNum].a4;
     }
 
     function checkAnswer(answer) {
-        if (answer === tQuestions[qNum].correct) {
+        if (answer === triviaQ[qNum].correct) {
             totalScore++;
-        }
-        else {
-            incorrect++
         }
         correct.innerText = `${totalScore}/${totalQuestions}`;
         timer = 15;
@@ -164,8 +182,9 @@ function loadEasyPage(info) {
     }
 
     function nextQuestion() {
+        qNum++;
+        console.log(qNum);
         if (qNum < totalQuestions) {
-            qNum++;
             loadQuestion();
         }
         else {
@@ -193,9 +212,6 @@ function loadEasyPage(info) {
 function loadHardPage(info) {
     injectValue.innerHTML = info;
 
-    let incorrect = 0;
-    let totalQuestions = 20;
-    let tQuestions = [];
     let diff = '../data/data.json';
     let qNum = 0;
     let timer = 5;
