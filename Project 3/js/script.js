@@ -291,9 +291,21 @@ function loadHardPage(info) {
     function checkAnswer(answer) {
         if (answer === triviaQ[qNum].correct) {
             totalScore++;
+            count++;
+            if (count == 3){
+                bookmark.innerText = "You collected a covenant bookmark!"; 
+                count = 0;
+                bookmarks++;
+                setTimeout(() => {
+                    bookmark.innerText = "";
+                }, 5000);
+            }
+        }
+        else{
+            count = 0;
         }
         correct.innerText = `${totalScore}/${totalQuestions}`;
-        timer = 5;
+        timer = 15;
         counter.innerText = timer;
         nextQuestion();
     }
