@@ -11,18 +11,34 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" class="stylesheet">
     <link rel="stylesheet" href="css/wickedcss.min.css" class="stylesheet">
-    <title>Hello, world!</title>
+    <title>To Do</title>
 </head>
 
 <body>
-    <div id="myDIV" class="header">
-        <h2>My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Add to list">
-        <span onclick="newElement()" class="addBtn">Add</span>
-      </div>
-      
-      <ul id="myUL">
-      </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="d-flex justify-content-center">To Do List</h1>
+            </div>
+            <div class="col-12">
+                <div class="keypress">
+                    <input class="form-control" id="keypress" placeholder="Add to list">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="addElements" class="col-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p class="d-flex justify-content-center" id="addList">Create New List</p>
+            </div>
+            <div class="col-6">
+                <p class="d-flex justify-content-center" id="clear">Clear All Lists</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
