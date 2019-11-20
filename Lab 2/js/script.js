@@ -1,4 +1,8 @@
 
+//---------------------------------- My Github Repo ---------------------------//
+
+//https://github.com/Tedward12/Codestack/tree/master/Lab%202
+
 
 
 let title = document.getElementById('title');
