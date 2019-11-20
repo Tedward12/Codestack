@@ -18,11 +18,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="d-flex justify-content-center">To Do List</h1>
+                <h1 id="title" class="my-3 py-2 bgBlue d-flex justify-content-center">Untitled List</h1>
             </div>
             <div class="col-12">
                 <div class="keypress">
-                    <input class="form-control" id="keypress" placeholder="Add to list">
+                    <input class="mb-3 form-control" id="keypress" placeholder="Add to list">
                 </div>
             </div>
         </div>
@@ -30,13 +30,17 @@
             <div id="addElements" class="col-12">
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <p class="d-flex justify-content-center" id="addList">Create New List</p>
+        <div class="row mt-3">
+            <div class="col-2"></div>
+            <div id="addList" class="col-2">
+                <p class="bgGreen py-2 d-flex justify-content-center">Save List</p>
             </div>
-            <div class="col-6">
-                <p class="d-flex justify-content-center" id="clear">Clear All Lists</p>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+            <div id="clear" class="col-2">
+                <p class="bgRed py-2 d-flex justify-content-center">Clear List</p>
             </div>
+            <div class="col-2"></div>
         </div>
     </div>
 

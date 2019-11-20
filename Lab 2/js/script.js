@@ -1,21 +1,28 @@
 
 
 
+let title = document.getElementById('title');
 let close = document.getElementsByClassName("close");
 let myNodelist = document.getElementsByClassName("list-group-item");
 let clear = document.getElementById('clear');
-let addList = document.getElementById('addList');
+let saveList = document.getElementById('addList');
 let keyPress = document.getElementById('keypress');
 let addElements = document.getElementById('addElements');
 let todoList = [];
+let titleStorage = ["Untitled List"]; 
+
+title.addEventListener('click',function(){
+    title.contentEditable = "true";
+});
 
 clear.addEventListener('click', function (e) {
   localStorage.clear();
   location.reload();
 });
 
-addList.addEventListener('click', function (e) {
-
+saveList.addEventListener('click', function (e) {
+  addTitle();
+  addTitle();
 });
 
 keyPress.addEventListener('keypress', function (e) {
@@ -26,6 +33,17 @@ keyPress.addEventListener('keypress', function (e) {
     keyPress.value = "";
   }
 });
+
+function addTitle(){
+  titleStorage.splice(0,2)
+  titleStorage.push(title.innerText);
+  localStorage.setItem('title', JSON.stringify(titleStorage));
+}
+
+function reloadTitle(titleName){
+  title.innerText = "Untitled List";
+  title.innerText = titleName;
+}
 
 function addPElement(content) {
   let pElement = document.createElement('p');
@@ -44,15 +62,19 @@ function addPElement(content) {
     close[i].onclick = function () {
       let div = this.parentElement;
       div.style.display = "none";
-      localStorage.removeItem('todo', JSON.stringify(todoList[i]))
+      todoList.splice(i,1);
+      localStorage.setItem('todo', JSON.stringify(todoList));
     }
   }
 }
 
 if (localStorage.getItem('todo') != '') {
+  let titleLocal = JSON.parse(localStorage.getItem('title'))
   let toDoLocal = JSON.parse(localStorage.getItem('todo'));
   for (let i = 0; i < toDoLocal.length; i++) {
     addPElement(toDoLocal[i]);
   }
+  reloadTitle(titleLocal);
+  titleStorage = titleLocal;
   todoList = toDoLocal;
 }
