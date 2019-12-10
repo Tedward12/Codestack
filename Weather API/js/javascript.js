@@ -13,6 +13,7 @@
 
 
 let injectValue = document.getElementById('inject');
+let body = document.getElementById('body')
 
 
 function loadHTML(url) {
@@ -37,9 +38,9 @@ function loadMainPage(info) {
     injectValue.innerHTML = info;
 
     let cityBtn = document.getElementById('city');
-
+    body.className = "";
     cityBtn.addEventListener('click', function (e) {
-        loadHTML('../inject/Weather.html');
+        loadHTML('../inject/weather.html');
     });
 }
 
@@ -47,7 +48,7 @@ function loadWeatherPage(info) {
     injectValue.innerHTML = info;
 
     let backBtn = document.getElementById('back');
-
+    body.className = "rain-bg";
     backBtn.addEventListener('click', function (e) {
         loadHTML('../inject/main.html');
     });
