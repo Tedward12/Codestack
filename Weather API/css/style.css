@@ -4,6 +4,9 @@ button{
 .size30{
     font-size: 30px;
 }
+.size50{
+    font-size: 50px;
+}
 .rain{
     background-image: url('../assets/rain.jpg');
     height: 52px;
@@ -14,8 +17,34 @@ button{
     height: 100vh;
     background-size: cover;
 }
+.rain-day{
+    background-image: url('../assets/rain.jpg');
+    height: 100%;
+    background-size: cover;
+}
 .bordered{
     border: 1px black solid;
 }
 .grey{background-color: grey;}
 .white{background-color: white;}
+.whiteTxt{color: white;}
+.yellow{background-color: yellow;}
+.black{
+    background-color: black;
+    color: white;
+}
+.stack{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top{
+    border-radius: 25%;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+  }
