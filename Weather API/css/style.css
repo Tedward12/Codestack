@@ -1,0 +1,21 @@
+button{
+    font-size: 30px;
+}
+.size30{
+    font-size: 30px;
+}
+.rain{
+    background-image: url('../assets/rain.jpg');
+    height: 52px;
+    background-size: cover;
+}
+.rain-bg{
+    background-image: url('../assets/rainBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.bordered{
+    border: 1px black solid;
+}
+.grey{background-color: grey;}
+.white{background-color: white;}
