@@ -7,6 +7,7 @@ button{
 .size50{
     font-size: 50px;
 }
+
 .rain{
     background-image: url('../assets/rain.jpg');
     height: 52px;
@@ -17,11 +18,57 @@ button{
     height: 100vh;
     background-size: cover;
 }
-.rain-day{
-    background-image: url('../assets/rain.jpg');
-    height: 100%;
+.clear{
+    background-image: url('../assets/clear.jpg');
+    height: 52px;
     background-size: cover;
 }
+.clear-bg{
+    background-image: url('../assets/clearBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.cloudy{
+    background-image: url('../assets/cloudy.jpg');
+    height: 52px;
+    background-size: cover;
+}
+.cloudy-bg{
+    background-image: url('../assets/cloudyBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.lightning{
+    background-image: url('../assets/lightning.jpg');
+    height: 52px;
+    background-size: cover;
+}
+.lightning-bg{
+    background-image: url('../assets/lightningBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.misty{
+    background-image: url('../assets/misty.jpg');
+    height: 52px;
+    background-size: cover;
+}
+.misty-bg{
+    background-image: url('../assets/mistyBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.snow{
+    background-image: url('../assets/snow.jpg');
+    height: 52px;
+    background-size: cover;
+}
+.snow-bg{
+    background-image: url('../assets/snowBG.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+
 .bordered{
     border: 1px black solid;
 }
@@ -37,7 +84,6 @@ button{
     display: flex;
     flex-direction: column;
 }
-
 .card-img-top{
     border-radius: 25%;
 }
