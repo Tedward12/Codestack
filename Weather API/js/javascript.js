@@ -33,6 +33,7 @@ loadHTML('../inject/main.html');
 //--------------------------------------------------------------------------------------------------//
 function loadMainPage(info) {
     injectValue.innerHTML = info;
+    body.className = "";
     let searchBtn = document.getElementById('searchBtn');
 
     if (localStorage.getItem('weatherData')) {
