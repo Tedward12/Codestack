@@ -373,10 +373,10 @@ function PopulateCityList() {
         let deleteBtn = document.createElement('button');
 
         row.setAttribute('class', 'row size30 bordered');
-        colCity.setAttribute('class', 'col-5 bordered');
-        colTemp.setAttribute('class', 'col-1 bordered d-flex justify-content-center');
-        colWeather.setAttribute('class', 'col-5 bordered');
-        colDelete.setAttribute('class', 'col-1 bordered px-0');
+        colCity.setAttribute('class', 'col-lg-5 bordered d-flex justify-content-center col-md-12');
+        colTemp.setAttribute('class', 'col-lg-1 bordered d-flex justify-content-center col-md-12');
+        colWeather.setAttribute('class', 'col-lg-5 bordered col-md-12');
+        colDelete.setAttribute('class', 'col-lg-1 bordered px-0 col-md-12');
         pCity.setAttribute('class', 'mb-0');
         pTemp.setAttribute('class', 'mb-0');
         deleteBtn.setAttribute('class', 'btn-danger btn-block mb-0');
@@ -391,40 +391,40 @@ function PopulateCityList() {
         });
 
         if (cityData[i].weather == 'Clear') {
-            colWeather.setAttribute('class', 'col-5 clear bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 clear bordered')
         }
         if (cityData[i].weather == 'Sunny') {
-            colWeather.setAttribute('class', 'col-5 clear bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 clear bordered')
         }
         else if (cityData[i].weather == 'Clouds') {
-            colWeather.setAttribute('class', 'col-5 cloudy bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 cloudy bordered')
         }
         else if (cityData[i].weather == 'Lightning') {
-            colWeather.setAttribute('class', 'col-5 lightning bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 lightning bordered')
         }
         else if (cityData[i].weather == 'Thunder') {
-            colWeather.setAttribute('class', 'col-5 lightning bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 lightning bordered')
         }
         else if (cityData[i].weather == 'Mist') {
-            colWeather.setAttribute('class', 'col-5 misty bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 misty bordered')
         }
         else if (cityData[i].weather == 'Haze') {
-            colWeather.setAttribute('class', 'col-5 misty bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 misty bordered')
         }
         else if (cityData[i].weather == 'Fog') {
-            colWeather.setAttribute('class', 'col-5 misty bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 misty bordered')
         }
         else if (cityData[i].weather == 'Rain') {
-            colWeather.setAttribute('class', 'col-5 rain bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 rain bordered')
         }
         else if (cityData[i].weather == 'Drizzle') {
-            colWeather.setAttribute('class', 'col-5 rain bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 rain bordered')
         }
         else if (cityData[i].weather == 'Snow') {
-            colWeather.setAttribute('class', 'col-5 snow bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 snow bordered')
         }
         else if (cityData[i].weather == 'Hail') {
-            colWeather.setAttribute('class', 'col-5 snow bordered')
+            colWeather.setAttribute('class', 'col-lg-5 col-md-12 snow bordered')
         }
 
         pCity.innerText = cityData[i].city;
