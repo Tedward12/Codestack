@@ -42,14 +42,24 @@ function loadMainPage(info) {
     injectValue.innerHTML = info;
     body.className = "";
     let searchBtn = document.getElementById('searchBtn');
+    let searchedItem = document.getElementById('searchTxt');
 
     if (localStorage.getItem('weatherData')) {
         cityData = JSON.parse(localStorage.getItem('weatherData'));
         PopulateCityList();
     }
-
+    // searchedItem.addEventListener('keypress', function(e){
+    //     if(e.keyCode==13){
+    //         let url_pt1 = "https://api.openweathermap.org/data/2.5/weather?q="
+    //         let url_city_pt2 = searchedItem.value;
+    //         let url_temp_pt3 = "&units=imperial";
+    //         let url_key_pt4 = "&appid=99649a8b829f6ea98a24e0ef1fd6b301";
+    //         let fullURL = url_pt1 + url_city_pt2 + url_temp_pt3 + url_key_pt4;
+    //         loadJSON(fullURL);
+    //         searchedItem.value = null;
+    //     }
+    // });
     searchBtn.addEventListener('click', function (e) {
-        let searchedItem = document.getElementById('searchTxt');
         let url_pt1 = "https://api.openweathermap.org/data/2.5/weather?q="
         let url_city_pt2 = searchedItem.value;
         let url_temp_pt3 = "&units=imperial";
