@@ -12,4 +12,8 @@ export class AboutUsComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickEvent(){
+    alert('You clicked me!');
+  }
+
 }
