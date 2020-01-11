@@ -1,0 +1,11 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+        <div class="col-3 pr-0">
+            <app-list-group (selectedStudent) = "onSelection($event)"></app-list-group>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4 d-flex justify-content-center">
+            <app-card [sStudent] = "sStudent"></app-card>
+        </div>
+    </div>
+</div>
