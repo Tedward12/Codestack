@@ -1,4 +1,4 @@
-<div class="card rounded-0">
+<!-- <div class="card rounded-0">
     <img src="{{sStudent?.img}}" class="card-img-top rounded-0" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{sStudent?.fN}} {{sStudent?.lN}}</h5>
@@ -8,4 +8,22 @@
         <li class="list-group-item">Slack: {{sStudent?.sN}}</li>
         <li class="list-group-item">Hobby: {{sStudent?.hob}}</li>
     </ul>
+</div> -->
+
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{sStudent?.img}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{sStudent?.fN}} {{sStudent?.lN}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">NickName: {{sStudent?.nN}}</li>
+                    <li class="list-group-item">Slack: {{sStudent?.sN}}</li>
+                    <li class="list-group-item">Hobby: {{sStudent?.hob}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

@@ -53,6 +53,24 @@ export class DataService {
     },
     {
       fN: 'Francisco',lN: 'Chavez',nN: 'Frankie',hob: 'reading',sN: 'Francisco Chavez', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Joseph',lN: 'Perez',nN: 'Joe',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Jose',lN: 'Martinez',nN: 'idk',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Alex',lN: 'Her',nN: 'idk',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Nayo',lN: 'Ortiz',nN: 'N/A',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Bisola',lN: 'Awujoola',nN: 'N/A',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
+    },
+    {
+      fN: 'Kevin',lN: 'Caballero',nN: 'N/A',hob: 'N/A',sN: 'N/A', img: './assets/placeholder.png'
     }
   ];
   constructor() { }
