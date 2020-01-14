@@ -13,6 +13,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CardComponent } from './card/card.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CardComponent } from './card/card.component';
     ProjectsComponent,
     LoginComponent,
     PageNotFoundComponent,
-    CardComponent
+    CardComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

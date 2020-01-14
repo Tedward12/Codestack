@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  projects = [
+    {pName: 'Puppy Restaurant', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: 'Hamster Hotel', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: 'Weather API', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: '...', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: '...', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: '...', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: '...', pLang:'...', pDesc: '...', pImg: '...'},
+    {pName: '...', pLang:'...', pDesc: '...', pImg: '...'}
+  ];
+
   constructor() { }
 
   ngOnInit() {
