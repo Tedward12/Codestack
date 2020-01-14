@@ -1,3 +1,9 @@
-<!-- <div *ngFor = 'let project of projects'>
-    <app-project-card [project-card] = project></app-project-card>
-</div> -->
+<div class="container-fluid background">
+    <div class="container">
+        <div class="row">
+            <div class="col-6" *ngFor = 'let project of projects'>
+                <app-project-card [projectCard] = "project"></app-project-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {enableProdMode} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,9 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CardComponent } from './card/card.component';
-import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectCardComponent } from './projectCard/project-card.component';
+
+enableProdMode();
 
 @NgModule({
   declarations: [

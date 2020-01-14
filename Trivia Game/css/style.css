@@ -1,0 +1,30 @@
+.background{
+    background-image: url(../assets/epic-seven-background.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.covenanant{
+    background-image: url(../assets/Covenant-Bookmark.jpeg);
+    height: 158px;
+    background-size: cover;
+}
+
+.bookmarkNumber{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 25%;
+    left: 40%;
+    font-size: 50px;
+}
+
+.white{color: white;}
+.black{color: black;}
+.bgWhite{background-color: white;}
+.solid{opacity: 100%;}
+.opacity{opacity: 30%;}
+.size15{font-size: 20px;}
+.size35{font-size: 35px;}
+.mt-50{margin-top: 50px;}
+.mt-100{margin-top: 100px;}
