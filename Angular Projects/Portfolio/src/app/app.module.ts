@@ -12,6 +12,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AboutMeComponent,
     ProjectsComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
