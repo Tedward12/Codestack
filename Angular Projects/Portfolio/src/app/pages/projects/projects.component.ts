@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
 
   projects = [
-    {pName: 'Puppy Restaurant', pLang:'HTML5, CSS, Bootstrap, Javascript', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
-    {pName: 'Hamster Hotel', pLang:'HTML5, CSS, Bootstrap, Javascript', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
+    {pName: 'Puppy Restaurant', pLang:'HTML5, CSS, Bootstrap', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
+    {pName: 'Hamster Hotel', pLang:'HTML5, CSS, Bootstrap', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
     {pName: 'Weather API', pLang:'HTML5, CSS, Bootstrap, Javascript', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
     {pName: 'Epic 7 Trivia Game', pLang:'HTML5, CSS, Bootstrap, Javascript', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
     {pName: 'To Do List', pLang:'HTML5, CSS, Bootstrap, Javascript', pDesc: '...', pImg: '/assets/camaroBackground.jpg'},
