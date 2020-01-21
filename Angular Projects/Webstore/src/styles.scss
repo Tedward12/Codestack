@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+.pokemon{
+    font-size: 30px;
+    //font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-family: 'pokemon-font', monospace;
+}

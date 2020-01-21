@@ -1,0 +1,35 @@
+.bg{
+    background-image: url(/assets/images/Switch.png);
+    //position: absolute;
+    height: 100vh;
+    background-size: cover;
+}
+.leftBG{
+    background-image: url(/assets/images/leftController.png);
+    background-color: #1336C7;
+    //position: absolute;
+    height: 100vh;
+    background-size: cover;
+}
+.rightBG{
+    background-image: url(/assets/images/rightController.png);
+    background-color: #E21E1E;
+    //position: absolute;
+    height: 100vh;
+    background-size: cover;
+}
+.bgBlack{
+    background-color: black;
+}
+.bgOrange{
+    background-color: orange;
+    border-left: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}
+.bgWhite{
+    background-color: white;
+    border-right: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}
