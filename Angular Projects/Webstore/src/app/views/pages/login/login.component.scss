@@ -1,0 +1,16 @@
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.column{
+    display: flex;
+    flex-direction: column
+}
+.ui-inputgroup{
+    font-size: 20px;
+}
+.mt-6{
+    margin-top: 250px;
+}
