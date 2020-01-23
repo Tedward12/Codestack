@@ -18,7 +18,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 import { ProfileComponent } from './views/pages/profile/profile.component';
-import { SearchComponent } from './views/pages/search/search.component';
 import { DealsComponent } from './views/pages/deals/deals.component';
 import { PokeballsComponent } from './views/pages/pokeballs/pokeballs.component';
 import { ApricornsComponent } from './views/pages/apricorns/apricorns.component';
@@ -38,7 +37,6 @@ import { CartComponent } from './views/pages/cart/cart.component';
     LoginComponent,
     PageNotFoundComponent,
     ProfileComponent,
-    SearchComponent,
     DealsComponent,
     PokeballsComponent,
     ApricornsComponent,
