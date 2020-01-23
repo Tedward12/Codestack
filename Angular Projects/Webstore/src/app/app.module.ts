@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {PanelModule} from 'primeng/panel';
+import {ToastModule} from 'primeng/toast';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {TabViewModule} from 'primeng/tabview';
+import {CodeHighlighterModule} from 'primeng/codehighlighter';
+import {ScrollPanelModule} from 'primeng/scrollpanel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,12 +27,7 @@ import { VitaminsComponent } from './views/pages/vitamins/vitamins.component';
 import { XItemsComponent } from './views/pages/x-items/x-items.component';
 import { MiscItemsComponent } from './views/pages/misc-items/misc-items.component';
 import { CartComponent } from './views/pages/cart/cart.component';
-import {PanelModule} from 'primeng/panel';
-import {ToastModule} from 'primeng/toast';
-import {SplitButtonModule} from 'primeng/splitbutton';
-import {TabViewModule} from 'primeng/tabview';
-import {CodeHighlighterModule} from 'primeng/codehighlighter';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+
 
 
 @NgModule({

@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'misc-items', component: MiscItemsComponent },
   { path: 'pokeballs', component: PokeballsComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'vitamins', component: VitaminsComponent },
+  { path: 'vitamin', component: VitaminsComponent },
   { path: 'x-items', component: XItemsComponent },
   { path: '', redirectTo: '/home',pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent}
