@@ -12,6 +12,7 @@ import { MiscItemsComponent } from './views/pages/misc-items/misc-items.componen
 import { PokeballsComponent } from './views/pages/pokeballs/pokeballs.component';
 import { VitaminsComponent } from './views/pages/vitamins/vitamins.component';
 import { XItemsComponent } from './views/pages/x-items/x-items.component';
+import { LandingComponent } from './views/pages/landing/landing.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'pokeballs', component: PokeballsComponent },
   { path: 'vitamin', component: VitaminsComponent },
   { path: 'x-items', component: XItemsComponent },
-  { path: '', redirectTo: '/home',pathMatch: 'full'},
+  { path: 'landing', component: LandingComponent },
+  { path: '', redirectTo: '/landing',pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent}
 ];
 
