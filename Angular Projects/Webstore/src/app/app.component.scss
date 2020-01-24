@@ -8,12 +8,14 @@
     background-image: url(/assets/images/leftController.png);
     background-color: #1336C7;
     //position: absolute;
+    min-height: 100vh;
     background-size: cover;
 }
 .rightBG{
     background-image: url(/assets/images/rightController.png);
     background-color: #E21E1E;
     //position: absolute;
+    min-height: 100vh;
     background-size: cover;
 }
 .bgBlack{
@@ -24,10 +26,12 @@
     border-left: black 10px solid;
     border-top: black 10px solid;
     border-bottom: black 10px solid;
+    height: 100vh;
 }
 .bgWhite{
     background-color: white;
     border-right: black 10px solid;
     border-top: black 10px solid;
     border-bottom: black 10px solid;
+    height: 100vh;
 }
