@@ -27,6 +27,7 @@ import { XItemsComponent } from './views/pages/x-items/x-items.component';
 import { MiscItemsComponent } from './views/pages/misc-items/misc-items.component';
 import { CartComponent } from './views/pages/cart/cart.component';
 import { LandingComponent } from './views/pages/landing/landing.component';
+import { SignUpComponent } from './views/pages/sign-up/sign-up.component';
 
 
 
@@ -46,7 +47,8 @@ import { LandingComponent } from './views/pages/landing/landing.component';
     XItemsComponent,
     MiscItemsComponent,
     CartComponent,
-    LandingComponent
+    LandingComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

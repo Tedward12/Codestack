@@ -13,6 +13,7 @@ import { PokeballsComponent } from './views/pages/pokeballs/pokeballs.component'
 import { VitaminsComponent } from './views/pages/vitamins/vitamins.component';
 import { XItemsComponent } from './views/pages/x-items/x-items.component';
 import { LandingComponent } from './views/pages/landing/landing.component';
+import { SignUpComponent } from './views/pages/sign-up/sign-up.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'vitamin', component: VitaminsComponent },
   { path: 'x-items', component: XItemsComponent },
   { path: 'landing', component: LandingComponent },
+  { path: 'sign-up', component: SignUpComponent },
   { path: '', redirectTo: '/landing',pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent}
 ];
