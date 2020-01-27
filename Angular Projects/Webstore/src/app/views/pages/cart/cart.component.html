@@ -1,1 +1,29 @@
-<p>cart works!</p>
+<div class="d-flex inRow mb-5">
+    <h1><strong class="pokemon ml-5">Cart</strong></h1>
+    <img routerLink="/cart" routerLinkActive="active" class="ml-auto cart" height="60px" src="assets/images/cart.png">
+</div>
+<div class="container pokemon size20">
+    <div class="row">
+        <!-- <div class="col inRow d-flex justify-content-around">
+        </div> -->
+        <div class="col-2 d-flex justify-content-center"><strong>Item</strong></div>
+        <div class="col-3 d-flex justify-content-center"><strong>Quantity</strong></div>
+        <div class="col-3 d-flex justify-content-center"><strong>Price</strong></div>
+        <div class="col-3 d-flex justify-content-center"><strong>Total</strong></div>
+        <div class="col-1"></div>
+    </div>
+    <p-scrollPanel [style]="{width: '100%', height: '75vh'}">
+        <div class="row brdr size20">
+            <div class="col-2 d-flex justify-content-center"><img src="assets/images/dreamBall.png"></div><!--{{img}}-->
+            <div class="col-3 my-4 d-flex justify-content-center"><p>x2</p></div><!--{{quantity}}-->
+            <div class="col-3 my-4 d-flex justify-content-center"><p>$20,000</p></div><!--{{price}}-->
+            <div class="col-3 my-4 d-flex justify-content-center"><p>$40,000</p></div><!--{{total}}-->
+            <div class="col-1 my-4 button bgRed"><strong>X</strong></div>
+        </div>
+    </p-scrollPanel>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary d-flex justify-content-end">Check Out</button>
+        </div>
+    </div>
+</div>
