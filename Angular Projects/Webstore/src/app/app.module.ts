@@ -28,6 +28,7 @@ import { MiscItemsComponent } from './views/pages/misc-items/misc-items.componen
 import { CartComponent } from './views/pages/cart/cart.component';
 import { LandingComponent } from './views/pages/landing/landing.component';
 import { SignUpComponent } from './views/pages/sign-up/sign-up.component';
+import { ModalComponent } from './vies/components/modal/modal.component';
 
 
 
@@ -48,7 +49,8 @@ import { SignUpComponent } from './views/pages/sign-up/sign-up.component';
     MiscItemsComponent,
     CartComponent,
     LandingComponent,
-    SignUpComponent
+    SignUpComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
