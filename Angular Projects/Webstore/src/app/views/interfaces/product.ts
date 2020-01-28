@@ -3,4 +3,6 @@ export interface Product {
     price: string;
     img: string;
     id: string;
+    pType: string;
+    pDesc: string
 }
