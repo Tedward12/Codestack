@@ -96,8 +96,10 @@ export class DataService {
   getProducts(): Product[] {
     return this.products;
   }
+
   cart: [
     { cImg: "", cPrice: "", cQuantity: "", cTotal: "" },
   ]
+  
   constructor() { }
 }
