@@ -13,9 +13,10 @@
                         <button (click) = 'add()' type="button" class="btn btn-success">+</button>
                     </div>
                     <h5>${{item.quantity*item.numPrice}}</h5>
-                    <a class="btn btn-danger">Remove</a>
+                    <a (click) = 'remove(item)' class="btn btn-danger">Remove</a>
                 </div>
             </div>
         </div>
+        <a (click) = 'removeAll()' class="btn btn-danger">Remove All</a>
     </div>
 </div>

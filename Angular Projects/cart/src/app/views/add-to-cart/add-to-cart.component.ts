@@ -18,6 +18,14 @@ export class AddToCartComponent implements OnInit {
     console.log(this.itemsInCart);
   }
 
+  remove(id: IProduct){
+    this.dService.removeItem(id);
+  }
+
+  removeAll(){
+    this.dService.emptyCart();
+  }
+
   //add(n): number{
   //  return this.itemsInCart.quantity++;
   //}

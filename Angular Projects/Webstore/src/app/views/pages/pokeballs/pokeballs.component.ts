@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../interfaces/product';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-pokeballs',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokeballsComponent implements OnInit {
 
-  constructor() { }
+  pokeballs: Product[];
+
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.pokeballs = this.dService.getProducts();
+    this.pokeballs = this.pokeballs.filter(x => x.pType === 'pokeballs')
   }
 
 }

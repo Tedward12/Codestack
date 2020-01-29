@@ -57,7 +57,12 @@ export class DataService {
   }
 
   addToCart(cartItem: IProduct) {
-    this.itemsInCart.push(cartItem);
+    if(!this.itemsInCart.includes(cartItem)){
+      this.itemsInCart.push(cartItem);
+    }
+    else if(this.itemsInCart.includes(cartItem)){
+      cartItem.quantity++;
+    }
   }
 
   getCart(): IProduct[]{
@@ -69,6 +74,20 @@ export class DataService {
   }
 
   getQuantity() {
-    
+
+  }
+
+  emptyCart(){
+    this.itemsInCart.length = 0;
+  }
+
+  removeItem(id: IProduct): void {
+    const index = this.findItemInCart(id);
+    this.itemsInCart[index].quantity = 1;
+    this.itemsInCart.splice(index,1);
+  }
+
+  findItemInCart(id: IProduct): number{
+    return this.itemsInCart.indexOf(id); 
   }
 }

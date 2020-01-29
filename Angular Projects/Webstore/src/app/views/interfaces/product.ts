@@ -4,5 +4,6 @@ export interface Product {
     img: string;
     id: string;
     pType: string;
-    pDesc: string
+    pDesc: string;
+    quantity: number;
 }
