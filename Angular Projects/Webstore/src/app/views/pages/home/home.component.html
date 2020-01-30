@@ -11,7 +11,7 @@
                         <img src="{{product.img}}" class="" alt="...">
                     </div>
                     <p class="card-text d-flex justify-content-center">{{product.price}}</p>
-                    <a class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
+                    <a (click) = 'addToCart(product)' class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
                 </div>
             </div>
         </p-scrollPanel>

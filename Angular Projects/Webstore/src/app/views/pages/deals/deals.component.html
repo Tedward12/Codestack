@@ -12,7 +12,7 @@
                     </div>
                     <p class="oldPrice card-text d-flex justify-content-center">{{product.price}}</p>
                     <p class="newPrice card-text d-flex justify-content-center">{{product.dealPrice}}</p>
-                    <a class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
+                    <a (click) = 'addToCart(product)' class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
                 </div>
             </div>
         </p-scrollPanel>

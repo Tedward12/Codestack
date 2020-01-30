@@ -18,4 +18,7 @@ export class DealsComponent implements OnInit {
     this.products = this.products.filter(x => x.pageType === 'deal')
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

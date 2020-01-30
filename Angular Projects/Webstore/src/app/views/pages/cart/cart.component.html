@@ -12,18 +12,33 @@
         <div class="col-3 d-flex justify-content-center"><strong>Total</strong></div>
         <div class="col-1"></div>
     </div>
-    <p-scrollPanel [style]="{width: '100%', height: '75vh'}">
-        <div class="row brdr size20">
-            <div class="col-2 d-flex justify-content-center"><img src="assets/images/dreamBall.png"></div><!--{{img}}-->
-            <div class="col-3 my-4 d-flex justify-content-center"><p>x2</p></div><!--{{quantity}}-->
-            <div class="col-3 my-4 d-flex justify-content-center"><p>$20,000</p></div><!--{{price}}-->
-            <div class="col-3 my-4 d-flex justify-content-center"><p>$40,000</p></div><!--{{total}}-->
-            <div class="col-1 my-4 button bgRed"><strong>X</strong></div>
+    <p-scrollPanel [style]="{width: '100%', height: '65vh'}">
+        <div *ngFor='let item of itemsInCart' class="row brdr size20">
+            <div class="col-2 d-flex justify-content-center"><img src="{{item.img}}"></div>
+            <!--{{img}}-->
+            <div class="col-3 my-3 d-flex justify-content-center">
+                <p>{{item.quantity}}</p>
+            </div>
+            <!--{{quantity}}-->
+            <div class="col-3 my-3 d-flex justify-content-center">
+                <p>{{item.price}}</p>
+            </div>
+            <!--{{price}}-->
+            <div class="col-3 my-3 d-flex justify-content-center">
+                <p>${{item.quantity*item.numPrice}}</p>
+            </div>
+            <!--{{total}}-->
+            <div (click) = 'remove(item)' class="col-1 my-3 btn-danger pr-4 button bgRed"><strong>X</strong></div>
         </div>
     </p-scrollPanel>
     <div class="row">
         <div class="col">
-            <button class="btn btn-primary d-flex justify-content-center">Check Out</button>
+            <div class="d-flex justify-content-end">
+                <p>Cart Total: </p>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary">Check Out</button>
+            </div>
         </div>
     </div>
 </div>

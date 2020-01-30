@@ -17,4 +17,8 @@ export class HealingItemsComponent implements OnInit {
     this.healing = this.dService.getProducts();
     this.healing = this.healing.filter(x => x.pType === 'healing')
   }
+
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

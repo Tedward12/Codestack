@@ -17,4 +17,8 @@ export class MiscItemsComponent implements OnInit {
     this.miscItems = this.dService.getProducts();
     this.miscItems = this.miscItems.filter(x => x.pType === 'misc')
   }
+
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

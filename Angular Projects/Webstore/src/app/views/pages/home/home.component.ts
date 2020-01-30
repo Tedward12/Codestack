@@ -18,4 +18,7 @@ export class HomeComponent implements OnInit {
     this.products = this.products.filter(x => x.pageType === 'home')
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

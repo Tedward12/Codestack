@@ -18,4 +18,7 @@ export class VitaminsComponent implements OnInit {
     this.vitamins = this.vitamins.filter(x => x.pType === 'vitamins')
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

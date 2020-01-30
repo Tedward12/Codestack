@@ -18,4 +18,7 @@ export class ApricornsComponent implements OnInit {
     this.apricorns = this.apricorns.filter(x => x.pType === 'apricorns')
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

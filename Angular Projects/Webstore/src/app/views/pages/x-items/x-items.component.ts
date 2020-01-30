@@ -18,4 +18,7 @@ export class XItemsComponent implements OnInit {
     this.xItems = this.xItems.filter(x => x.pType === 'xItems')
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }

@@ -15,7 +15,10 @@ export class PokeballsComponent implements OnInit {
 
   ngOnInit() {
     this.pokeballs = this.dService.getProducts();
-    this.pokeballs = this.pokeballs.filter(x => x.pType === 'pokeballs')
+    this.pokeballs = this.pokeballs.filter(x => x.pType === 'pokeballs');
   }
 
+  addToCart(p: Product) {
+    this.dService.addToCart(p);
+  }
 }
