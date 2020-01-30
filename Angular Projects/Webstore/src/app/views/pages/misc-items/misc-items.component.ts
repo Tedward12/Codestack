@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../interfaces/product';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-misc-items',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiscItemsComponent implements OnInit {
 
-  constructor() { }
+  miscItems: Product[];
+
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.miscItems = this.dService.getProducts();
+    this.miscItems = this.miscItems.filter(x => x.pType === 'misc')
   }
-
 }

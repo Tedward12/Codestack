@@ -9,10 +9,13 @@ import { DataService } from '../../services/data.service';
 })
 export class HomeComponent implements OnInit {
 
-    products: Product[];
+  products: Product[];
+
   constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.products = this.dService.getProducts();
+    this.products = this.products.filter(x => x.pageType === 'home')
   }
 
 }

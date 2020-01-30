@@ -6,4 +6,6 @@ export interface Product {
     pType: string;
     pDesc: string;
     quantity: number;
+    pageType: string;
+    dealPrice: string;
 }

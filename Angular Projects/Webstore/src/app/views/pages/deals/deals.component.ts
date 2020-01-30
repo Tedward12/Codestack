@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-deals',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DealsComponent implements OnInit {
 
-  constructor() { }
+  products: Product[];
+
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.products = this.dService.getProducts();
+    this.products = this.products.filter(x => x.pageType === 'deal')
   }
 
 }

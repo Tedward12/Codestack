@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../interfaces/product';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-x-items',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class XItemsComponent implements OnInit {
 
-  constructor() { }
+  xItems: Product[];
+
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.xItems = this.dService.getProducts();
+    this.xItems = this.xItems.filter(x => x.pType === 'xItems')
   }
 
 }

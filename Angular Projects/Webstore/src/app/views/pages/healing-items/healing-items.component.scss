@@ -1,16 +1,9 @@
-.custom .ui-scrollpanel-wrapper {
-    border-right: 9px solid #f4f4f4; 
-}
-
-.custom .ui-scrollpanel-bar {
-    background-color: #1976d2; 
-    opacity: 1; 
-    transition: background-color .3s; 
-}
-
-.custom .ui-scrollpanel-bar:hover {
-    background-color: #135ba1;
-}
-.size15{
+p{
     font-size: 15px;
+}
+strong{
+    font-size: 15px;
+}
+.btn{
+    color: white;
 }

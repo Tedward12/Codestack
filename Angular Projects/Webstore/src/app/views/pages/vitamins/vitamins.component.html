@@ -1,135 +1,17 @@
 <div class="d-flex inRow">
-    <h1><strong class="pokemon ml-5">Vitamins</strong></h1>
+    <h1 class="pokemon ml-5">Vitamins</h1>
     <img routerLink="/cart" routerLinkActive="active" class="ml-auto cart" height="60px" src="assets/images/cart.png">
 </div>
 <div class="container-fluid pokemon">
     <p-scrollPanel [style]="{width: '100%', height: '90vh'}">
         <div class="row mt-5">
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/calcium.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/carbos.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <img class="mt-2" height="100px" src="assets/images/hpUp.png">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">Calcium</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">Carbos</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">HP Up</strong>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/iron.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/protein.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/zinc.png">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">Iron</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">Protein</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">Zinc</strong>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/ppMax.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <img height="100px" src="assets/images/ppUp.png">
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">PP Max</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">PP Up</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <strong class="size15">$9,800</strong>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
-                <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-            </div>
-            <div class="col-4 d-flex justify-content-center">
+            <div *ngFor='let vitamin of vitamins' class="col-4 mb-5">
+                <strong class="card-title text-center d-flex justify-content-center">{{vitamin.pName}}</strong>
+                <div class="d-flex justify-content-center">
+                    <img src="{{vitamin.img}}" class="" alt="...">
+                </div>
+                <p class="card-text d-flex justify-content-center">{{vitamin.price}}</p>
+                <a class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
             </div>
         </div>
     </p-scrollPanel>

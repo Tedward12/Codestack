@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../interfaces/product';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-healing-items',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HealingItemsComponent implements OnInit {
 
-  constructor() { }
+  healing: Product[];
+
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    this.healing = this.dService.getProducts();
+    this.healing = this.healing.filter(x => x.pType === 'healing')
   }
-
 }

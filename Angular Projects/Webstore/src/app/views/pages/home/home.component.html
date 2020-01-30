@@ -1,138 +1,18 @@
 <div class="d-flex inRow">
-    <h1><strong class="pokemon ml-5">Home</strong></h1>
+    <h1 class="pokemon ml-5">Home</h1>
     <img routerLink="/cart" routerLinkActive="active" class="ml-auto cart" height="60px" src="assets/images/cart.png">
 </div>
 <div class="container-fluid pokemon">
-    <div class="row mt-5">
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/dreamBall.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/calcium.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img class="mt-2" height="75px" src="assets/images/masterBall.png">
-        </div>
+        <p-scrollPanel [style]="{width: '100%', height: '90vh'}">
+            <div class="row mt-5">
+                <div *ngFor='let product of products' class="col-4 mb-5">
+                    <strong class="card-title text-center d-flex justify-content-center">{{product.pName}}</strong>
+                    <div class="d-flex justify-content-center">
+                        <img src="{{product.img}}" class="" alt="...">
+                    </div>
+                    <p class="card-text d-flex justify-content-center">{{product.price}}</p>
+                    <a class="btn btn-success d-flex justify-content-center"><strong>Add to Cart</strong></a>
+                </div>
+            </div>
+        </p-scrollPanel>
     </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Dream Ball</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Calcium</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Master Ball</strong>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$25,000</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$9,800</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$250,000</strong>
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-danger"><strong>Out of Stock</strong></button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/bike.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/rareCandy.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/zinc.png">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Bike</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Rare Candy</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Zinc</strong>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$1,000,000</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$25,000</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$9,800</strong>
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/lemonade.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img height="100px" src="assets/images/beastBall.png">
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <img class="mt-3" height="75px" src="assets/images/sacredAsh.png">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Lemonade</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Beast Ball</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">Sacred Ash</strong>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$350</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$100,000</strong>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <strong class="size15">$20,000</strong>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-        <div class="col-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-success"><strong>Add to Cart</strong></button>
-        </div>
-    </div>
-</div>
