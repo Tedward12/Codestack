@@ -18,7 +18,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-found.component';
 import { ProfileComponent } from './views/pages/profile/profile.component';
-import { DealsComponent } from './views/pages/deals/deals.component';
 import { PokeballsComponent } from './views/pages/pokeballs/pokeballs.component';
 import { ApricornsComponent } from './views/pages/apricorns/apricorns.component';
 import { HealingItemsComponent } from './views/pages/healing-items/healing-items.component';
@@ -40,7 +39,6 @@ import { ModalComponent } from './views/components/modal/modal.component';
     LoginComponent,
     PageNotFoundComponent,
     ProfileComponent,
-    DealsComponent,
     PokeballsComponent,
     ApricornsComponent,
     HealingItemsComponent,

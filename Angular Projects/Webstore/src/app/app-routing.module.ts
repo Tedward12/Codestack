@@ -6,7 +6,6 @@ import { PageNotFoundComponent } from './views/pages/page-not-found/page-not-fou
 import { ProfileComponent } from './views/pages/profile/profile.component';
 import { ApricornsComponent } from './views/pages/apricorns/apricorns.component';
 import { CartComponent } from './views/pages/cart/cart.component';
-import { DealsComponent } from './views/pages/deals/deals.component';
 import { HealingItemsComponent } from './views/pages/healing-items/healing-items.component';
 import { MiscItemsComponent } from './views/pages/misc-items/misc-items.component';
 import { PokeballsComponent } from './views/pages/pokeballs/pokeballs.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'apricorns', component: ApricornsComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'deals', component: DealsComponent },
   { path: 'healing-items', component: HealingItemsComponent },
   { path: 'misc-items', component: MiscItemsComponent },
   { path: 'pokeballs', component: PokeballsComponent },

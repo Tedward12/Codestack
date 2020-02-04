@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/views/interfaces/product'
+import { Login } from '../interfaces/login';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,14 @@ import { Product } from 'src/app/views/interfaces/product'
 export class DataService {
 
   itemsInCart: Product[] = [];
+
+  login: Login = {
+    username: 'Username',
+    password: 'password',
+    email: 'something@something.com',
+    fName: 'First Name',
+    lName: 'Last Name'
+  };
 
   private products: Product[] = [
     { numPrice: 200, dealPrice: '$180', pageType: 'deal', quantity: 1, id: "1", pName: "Pokeball", price: "$200", img: "assets/images/pokeBall.png", pType: "pokeballs", pDesc: "Is used for catching and storing Pokémon." },
@@ -127,5 +136,8 @@ export class DataService {
     return this.itemsInCart.indexOf(id);
   }
 
+  setLogin() {
+    return this.login;
+  }
 }
 

@@ -4,8 +4,6 @@
 </div>
 <div class="container pokemon size20">
     <div class="row">
-        <!-- <div class="col inRow d-flex justify-content-around">
-        </div> -->
         <div class="col-2 d-flex justify-content-center"><strong>Item</strong></div>
         <div class="col-3 d-flex justify-content-center"><strong>Quantity</strong></div>
         <div class="col-3 d-flex justify-content-center"><strong>Price</strong></div>
@@ -15,26 +13,22 @@
     <p-scrollPanel [style]="{width: '100%', height: '65vh'}">
         <div *ngFor='let item of itemsInCart' class="row brdr size20">
             <div class="col-2 d-flex justify-content-center"><img src="{{item.img}}"></div>
-            <!--{{img}}-->
             <div class="col-3 my-3 d-flex justify-content-center">
                 <p>{{item.quantity}}</p>
             </div>
-            <!--{{quantity}}-->
             <div class="col-3 my-3 d-flex justify-content-center">
                 <p>{{item.price}}</p>
             </div>
-            <!--{{price}}-->
             <div class="col-3 my-3 d-flex justify-content-center">
                 <p>${{item.quantity*item.numPrice}}</p>
             </div>
-            <!--{{total}}-->
             <div (click) = 'remove(item)' class="col-1 my-3 btn-danger pr-4 button bgRed"><strong>X</strong></div>
         </div>
     </p-scrollPanel>
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-end">
-                <p>Cart Total: </p>
+                <p>Cart Total: {{total}}</p>
             </div>
             <div class="d-flex justify-content-end">
                 <button class="btn btn-primary">Check Out</button>

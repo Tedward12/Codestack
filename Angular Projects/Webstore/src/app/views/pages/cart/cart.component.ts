@@ -9,6 +9,7 @@ import { DataService } from '../../services/data.service';
 })
 export class CartComponent implements OnInit {
 
+  total: number = 0;
   num: number = 1;
   itemsInCart: Product[];
   constructor(private dService: DataService) { }
@@ -16,10 +17,17 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.itemsInCart = this.dService.getCart();
     console.log(this.itemsInCart);
+    for(let i = 0; i < this.itemsInCart.length; i++){
+      this.total += this.itemsInCart[i].quantity * this.itemsInCart[i].numPrice;
+    }
   }
 
   remove(id: Product){
     this.dService.removeItem(id);
+    this.total = 0;
+    for(let i = 0; i < this.itemsInCart.length; i++){
+      this.total += this.itemsInCart[i].quantity * this.itemsInCart[i].numPrice;
+    }
   }
 
   removeAll(){
