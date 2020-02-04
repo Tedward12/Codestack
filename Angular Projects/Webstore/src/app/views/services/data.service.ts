@@ -15,7 +15,8 @@ export class DataService {
     password: 'password',
     email: 'something@something.com',
     fName: 'First Name',
-    lName: 'Last Name'
+    lName: 'Last Name',
+    sAddress: 'Shipping Address'
   };
 
   private products: Product[] = [

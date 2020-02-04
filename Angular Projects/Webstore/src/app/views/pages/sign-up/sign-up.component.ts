@@ -14,7 +14,8 @@ export class SignUpComponent implements OnInit {
     lName: '',
     username: '',
     password: '',
-    email: ''
+    email: '',
+    sAddress: ''
   };
 
   constructor(private dService: DataService) { }
@@ -23,11 +24,12 @@ export class SignUpComponent implements OnInit {
     this.loginInfo = this.dService.setLogin();
   }
 
-  setLoginInfo(un: string,fn: string,ln: string,em: string,pw: string){
+  setLoginInfo(un: string,fn: string,ln: string,em: string,sa: string,pw: string){
     this.loginInfo.username = un;
     this.loginInfo.fName = fn;
     this.loginInfo.lName = ln;
     this.loginInfo.email = em;
+    this.loginInfo.sAddress = sa;
     this.loginInfo.password = pw;
     this.dService.login = this.loginInfo;
   }

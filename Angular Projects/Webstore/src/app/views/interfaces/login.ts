@@ -4,4 +4,5 @@ export interface Login {
     email: string;
     fName: string;
     lName: string;
+    sAddress: string;
 }
