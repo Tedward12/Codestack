@@ -1,12 +1,18 @@
 .bgOrange{
-    background-color: orange;
+    background-color: purple;
 }
 .whiteTxt{
     color: white;
 }
-p:hover{
+strong:hover{
     cursor: pointer;
 }
 img:hover{
     cursor: pointer;
 }
+// strong {
+//     color: black;
+//     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+//     -webkit-text-stroke-width: 1px;
+//     -webkit-text-stroke-color: black;
+//   }
