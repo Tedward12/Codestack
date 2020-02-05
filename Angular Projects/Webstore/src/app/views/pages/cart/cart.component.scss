@@ -13,4 +13,9 @@
 }
 h1{
     font-weight: bold;
-   }
+}
+.inRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
