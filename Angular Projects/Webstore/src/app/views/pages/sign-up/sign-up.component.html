@@ -22,8 +22,8 @@
                 <input #em class="size20" type="email" placeholder="">
             </div>
             <div class="ui-inputgroup d-flex column">
-                <p class="mb-0 size20">Shipping Address</p>
-                <input #sa class="size20" type="text" placeholder="">
+                <p class="mb-0 size20">Confirm Email</p>
+                <input #cem class="size20" type="text" placeholder="">
             </div>
             <div class="ui-inputgroup  d-flex column">
                 <p class="mb-0 size20">Password</p>
@@ -31,9 +31,9 @@
             </div>
             <div class="ui-inputgroup  d-flex column mb-3">
                 <p class="mb-0 size20">Confirm Password</p>
-                <input class="size20" type="password" placeholder="">
+                <input #cpw class="size20" type="password" placeholder="">
             </div>
-            <button (click)='setLoginInfo(un.value,fn.value,ln.value,em.value,sa.value,pw.value)' routerLink='/profile'
+            <button (click)='setLoginInfo(un.value,fn.value,ln.value,em.value,cem.value,sa.value,pw.value,cpw.value)'
                 type="button" class="btn btn-dark btn-lg btn-block">Create Account</button>
         </div>
         <div class="col-2"></div>

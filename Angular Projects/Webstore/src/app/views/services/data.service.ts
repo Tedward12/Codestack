@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Product } from 'src/app/views/interfaces/product'
 import { Login } from '../interfaces/login';
+import { User } from '../interfaces/user';
+import { Password } from 'primeng/password/password';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +11,13 @@ import { Login } from '../interfaces/login';
 export class DataService {
 
   itemsInCart: Product[] = [];
+
+  userList: User[] = [
+    {
+      username: 'Tedward',
+      password: 'password123'
+    }
+  ];
 
   login: Login = {
     username: 'Username',
@@ -105,7 +114,24 @@ export class DataService {
     { numPrice: 2000, dealPrice: '$1,800', pageType: 'deal', quantity: 1, id: "83", pName: "Elixir", price: "$2,000", img: "assets/images/elixir.png", pType: "misc", pDesc: "It restores 10 PP for all of a Pokémon's moves." },
     { numPrice: 3000, dealPrice: '', pageType: '', quantity: 1, id: "84", pName: "Max Elixir", price: "$3,000", img: "assets/images/maxElixir.png", pType: "misc", pDesc: " It fully restores PP for all of a Pokémon's moves." }
   ];
+
   constructor() { }
+
+  addUser(un: string,pw: string){
+    const userAccount: User = {
+      username: un.toLowerCase(),
+      password: pw
+    }
+    this.userList.push(userAccount);
+  }
+
+  verifyUsername(username: string): boolean {
+    let result = false;
+    if(this.userList.find(x => username.toLowerCase() === x.username) !== undefined){
+      result =true;
+    }
+    return result;
+  }
 
   addToCart(cartItem: Product) {
     if (!this.itemsInCart.includes(cartItem)) {

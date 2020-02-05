@@ -24,7 +24,19 @@ export class SignUpComponent implements OnInit {
     this.loginInfo = this.dService.setLogin();
   }
 
-  setLoginInfo(un: string,fn: string,ln: string,em: string,sa: string,pw: string){
+  setLoginInfo(un: string,fn: string,ln: string,em: string,cem: string,sa: string,pw: string,cpw: string){
+
+    if(em===cem && pw.length > 7){
+      if(pw===cpw){
+        if(this.dService.verifyUsername(un)){
+          alert('Username already exists.')
+        }
+        else{
+          this.dService.addUser(un, pw)
+        }
+      }
+    }
+
     this.loginInfo.username = un;
     this.loginInfo.fName = fn;
     this.loginInfo.lName = ln;
