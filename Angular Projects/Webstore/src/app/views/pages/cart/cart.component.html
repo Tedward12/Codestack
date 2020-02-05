@@ -10,8 +10,8 @@
         <div class="col-1"></div>
     </div>
     <p-scrollPanel [style]="{width: '100%', height: '65vh'}">
-        <div *ngFor='let item of itemsInCart' class="row brdr size20">
-            <div class="col-2 d-flex justify-content-center"><img src="{{item.img}}"></div>
+        <!-- <div *ngFor='let item of itemsInCart' class="row brdr size20">
+            <div class="col-2 d-flex justify-content-center"><img class="img-fluid" src="{{item.img}}"></div>
             <div class="col-3 my-3 d-flex justify-content-center">
                 <p>{{item.quantity}}</p>
             </div>
@@ -21,8 +21,15 @@
             <div class="col-3 my-3 d-flex justify-content-center">
                 <p>${{item.quantity*item.numPrice}}</p>
             </div>
-            <div (click) = 'remove(item)' class="col-1 my-3 btn-danger pr-4 button bgRed"><strong>X</strong></div>
-        </div>
+            <div (click)='remove(item)' class="col-1 my-3 btn-danger pr-4 button bgRed"><strong>X</strong></div>
+        </div> -->
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
     </p-scrollPanel>
     <div class="row">
         <div class="col">

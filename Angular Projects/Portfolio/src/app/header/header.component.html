@@ -6,23 +6,4 @@
     <li class="nav-item">
         <a class="nav-link" href="/pages/about-me">About Me</a>
     </li>
-    <div class="row">
-        <div class="col">
-            <div ngbDropdown #myDrop="ngbDropdown" class="d-inline-block">
-                <a (focus)="myDrop.open()" href="/pages/projects"
-                    (mouseenter)="$event.stopPropagation(); myDrop.open();" class="nav-link" id="dropdownBasic1"
-                    ngbDropdownToggle>Projects</a>
-                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                    <button ngbDropdownItem>Puppy Restaurant</button>
-                    <button ngbDropdownItem>Hamster Hotel</button>
-                    <button ngbDropdownItem>Weather API</button>
-                    <button ngbDropdownItem>Epic 7 Trivia Game</button>
-                    <button ngbDropdownItem>To Do List</button>
-                    <button ngbDropdownItem>Codestack Student Directory</button>
-                    <button ngbDropdownItem>Game Ranking Website</button>
-                    <button ngbDropdownItem>Bussiness Redevelopment</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </ul>
