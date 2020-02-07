@@ -5,16 +5,16 @@
         <div class="col pokemon">
             <div class="ui-inputgroup d-flex column justify-content-center mb-3">
                 <p class="mb-0">Username</p>
-                <input type="text" pInputText placeholder="Name123">
+                <input #un type="text" placeholder="Name123">
             </div>
             <div class="ui-inputgroup  d-flex column justify-content-center">
                 <p class="mb-0">Password</p>
-                <input type="password" pPassword pInputText placeholder="password123">
+                <input #pw type="password" placeholder="password123">
             </div>
             <div class="div inRow size10">
                 <p>Need an account?</p><p class="button" routerLink="/sign-up" routerLinkActive="active">Sign up here!</p>
             </div>
-            <button type="button" routerLink='/home' class="btn btn-dark btn-lg btn-block">Login</button>
+            <button type="button" (click)='setLoginInfo(un.value,pw.value)' routerLink='/home' class="btn btn-dark btn-lg btn-block">Login</button>
         </div>
         <div class="col-2"></div>
     </div>

@@ -10,6 +10,8 @@ import { Password } from 'primeng/password/password';
 
 export class DataService {
 
+  signedInUser: User;
+
   itemsInCart: Product[] = [];
 
   userList: User[] = [
@@ -19,10 +21,10 @@ export class DataService {
     }
   ];
 
-  login: Login = {
+  login: Login= {
     username: 'Username',
     password: 'password',
-    email: 'something@something.com',
+    email: 'Email',
     fName: 'First Name',
     lName: 'Last Name',
     sAddress: 'Shipping Address'
@@ -116,6 +118,14 @@ export class DataService {
   ];
 
   constructor() { }
+
+  getLoggedInUser(): User{
+    return this.signedInUser;
+  }
+
+  getUser(): User[]{
+    return this.userList;
+  }
 
   addUser(un: string,pw: string){
     const userAccount: User = {

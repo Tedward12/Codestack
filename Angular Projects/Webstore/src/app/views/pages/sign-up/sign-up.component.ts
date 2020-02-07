@@ -24,7 +24,7 @@ export class SignUpComponent implements OnInit {
     this.loginInfo = this.dService.setLogin();
   }
 
-  setLoginInfo(un: string,fn: string,ln: string,em: string,cem: string,sa: string,pw: string,cpw: string){
+  setLoginInfo(un: string,fn: string,ln: string,em: string,cem: string,pw: string,cpw: string){
 
     if(em===cem && pw.length > 7){
       if(pw===cpw){
@@ -41,7 +41,6 @@ export class SignUpComponent implements OnInit {
     this.loginInfo.fName = fn;
     this.loginInfo.lName = ln;
     this.loginInfo.email = em;
-    this.loginInfo.sAddress = sa;
     this.loginInfo.password = pw;
     this.dService.login = this.loginInfo;
   }

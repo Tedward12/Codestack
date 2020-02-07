@@ -1,0 +1,52 @@
+<h1 class="pokemon ml-5 mb-5">Checkout</h1>
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col pokemon mt-5">
+            <div class="row inRow">
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">First name</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">Last Name</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+            </div>
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Name on Card</p>
+                <input class="size20" type="text" placeholder="">
+            </div>
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Card Number</p>
+                <input class="size20" type="email" placeholder="">
+            </div>
+            <div class="row inRow">
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">Expiration Date</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">CVV</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+            </div>
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Shipping Address</p>
+                <input class="size20" type="text" placeholder="">
+            </div>
+            <div class="row inRow">
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">City/State</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">Zip Code</p>
+                    <input class="size20" type="text" placeholder="">
+                </div>
+            </div>
+            <button routerLink="/home"(click)='clearCart()' type="button" class="btn btn-dark btn-lg btn-block mt-3">Checkout</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

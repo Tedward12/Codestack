@@ -28,6 +28,7 @@ import { CartComponent } from './views/pages/cart/cart.component';
 import { LandingComponent } from './views/pages/landing/landing.component';
 import { SignUpComponent } from './views/pages/sign-up/sign-up.component';
 import { ModalComponent } from './views/components/modal/modal.component';
+import { CheckoutComponent } from './views/pages/checkout/checkout.component';
 
 
 
@@ -48,7 +49,8 @@ import { ModalComponent } from './views/components/modal/modal.component';
     CartComponent,
     LandingComponent,
     SignUpComponent,
-    ModalComponent
+    ModalComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
