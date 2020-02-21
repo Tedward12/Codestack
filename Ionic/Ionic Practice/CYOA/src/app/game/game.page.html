@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Untitled Choose Your Own Adventure Game
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">UCYOAG</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h4>{{info.scene}}</h4>
+  <div *ngIf="!end">
+    <ion-button (click)="getResult1()" expand="block">{{info.option1}}</ion-button>
+    <ion-button (click)="getResult2()" expand="block">{{info.option2}}</ion-button>
+  </div>
+  <div *ngIf="one">
+    <ion-button (click)="getResult3()" routerLink="{{info.option3}}" expand="block">{{info.option3}}</ion-button>
+  </div>
+  <ion-button routerLink="/home" expand="block">Home</ion-button>
+</ion-content>
