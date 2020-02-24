@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{town}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>Address: {{address}}</ion-card-content>
+        <ion-card-content>City: {{city}}</ion-card-content>
+        <ion-card-content>County: {{county}}</ion-card-content>
+        <ion-card-content>Zipcode: {{zipcode}}</ion-card-content>
+      </ion-card>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card *ngFor='let x of destination'>
+    <ion-card-header>
+      <ion-card-subtitle>Destination</ion-card-subtitle>
+      <ion-card-title>{{x.destination}}</ion-card-title>
+    </ion-card-header>
+    <div *ngFor='let m of x.estimate'>
+        <ion-card-content>Minutes:{{m.minutes}}</ion-card-content>
+        <ion-card-content>Platform:{{m.platform}}</ion-card-content>
+        <ion-card-content>Direction:{{m.direction}}</ion-card-content>
+        <ion-card-content>Delay:{{m.delay}}</ion-card-content>
+    </hr>
+    </div>
+  </ion-card>
+</ion-content>
