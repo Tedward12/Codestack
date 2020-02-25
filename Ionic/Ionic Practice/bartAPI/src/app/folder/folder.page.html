@@ -16,7 +16,6 @@
         </ion-card-header>
         <ion-card-content>Address: {{address}}</ion-card-content>
         <ion-card-content>City: {{city}}</ion-card-content>
-        <ion-card-content>County: {{county}}</ion-card-content>
         <ion-card-content>Zipcode: {{zipcode}}</ion-card-content>
       </ion-card>
     </ion-toolbar>
@@ -26,8 +25,9 @@
       <ion-card-subtitle>Destination</ion-card-subtitle>
       <ion-card-title>{{x.destination}}</ion-card-title>
     </ion-card-header>
-    <div *ngFor='let m of x.estimate'>
-      <p>________________________________________________________</p>
+      <div *ngFor='let m of x.estimate'>
+      <ion-item-divider></ion-item-divider>
+      <ion-card-content class="black">Estimate</ion-card-content>
       <ion-card-content>Minutes:{{m.minutes}}</ion-card-content>
       <ion-card-content>Platform:{{m.platform}}</ion-card-content>
       <ion-card-content>Direction:{{m.direction}}</ion-card-content>
