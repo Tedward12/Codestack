@@ -17,19 +17,13 @@ export class FolderPage implements OnInit {
   county = this.dService.county;
   zipcode = this.dService.zipcode;
 
-constructor(
-  private dService: DataService
-) { }
+  constructor(
+    private dService: DataService
+  ) { }
 
-ngOnInit() {
-  this.dService.getData().subscribe(x => console.log(x));
-  this.dService.getStations();
-  this.destination = this.dService.depart;
-}
-
-getDepartData(){
-  console.log(this.destination);
-  console.log(this.town);
-}
+  ngOnInit() {
+    this.dService.getStations();
+    this.destination = this.dService.depart;
+  }
 
 }

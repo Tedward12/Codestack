@@ -10,22 +10,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>{{town}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>Address: {{address}}</ion-card-content>
-        <ion-card-content>City: {{city}}</ion-card-content>
-        <ion-card-content>Zipcode: {{zipcode}}</ion-card-content>
-      </ion-card>
+        <h1>Welcome to BART</h1>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{town}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Address: {{address}}</ion-card-content>
+    <ion-card-content>City: {{city}}</ion-card-content>
+    <ion-card-content>Zipcode: {{zipcode}}</ion-card-content>
+  </ion-card>
   <ion-card *ngFor='let x of destination'>
     <ion-card-header>
       <ion-card-subtitle>Destination</ion-card-subtitle>
       <ion-card-title>{{x.destination}}</ion-card-title>
     </ion-card-header>
-      <div *ngFor='let m of x.estimate'>
+    <div *ngFor='let m of x.estimate'>
       <ion-item-divider></ion-item-divider>
       <ion-card-content class="black">Estimate</ion-card-content>
       <ion-card-content>Minutes:{{m.minutes}}</ion-card-content>

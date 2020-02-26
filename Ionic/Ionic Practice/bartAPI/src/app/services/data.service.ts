@@ -46,7 +46,6 @@ export class DataService {
         }
       }
       );
-      console.log(this.depart);
   }
 
   getStations() {
@@ -65,7 +64,6 @@ export class DataService {
           };
           this.stations.push(info);
         }
-        console.log(this.stations);
       }
     );
   }

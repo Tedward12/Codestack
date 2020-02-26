@@ -30,13 +30,11 @@ export class AppComponent implements OnInit {
     let departURL2 = abbr;
     let departURL3 = '&key=Z2R9-58Q2-9MUT-DWE9&json=y';
     let departURL = departURL1+departURL2+departURL3;
-    console.log(departURL);
     this.dService.town = name;
     this.dService.address = address;
     this.dService.city = city; 
     this.dService.county = county;
     this.dService.zipcode = zipcode;
-    console.log(this.dService.town);
     this.dService.getDestination(departURL);
   }
 
