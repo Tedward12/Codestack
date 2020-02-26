@@ -2,18 +2,18 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <h1>Welcome to BART</h1>
     </ion-buttons>
     <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content class="blueBG" [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-        <h1>Welcome to BART</h1>
     </ion-toolbar>
-  </ion-header>
-  <ion-card>
+  </ion-header> -->
+  <ion-card color="medium">
     <ion-card-header>
       <ion-card-title>{{town}}</ion-card-title>
     </ion-card-header>
@@ -21,18 +21,34 @@
     <ion-card-content>City: {{city}}</ion-card-content>
     <ion-card-content>Zipcode: {{zipcode}}</ion-card-content>
   </ion-card>
-  <ion-card *ngFor='let x of destination'>
+  <ion-card  color="dark" *ngFor='let x of destination'>
     <ion-card-header>
       <ion-card-subtitle>Destination</ion-card-subtitle>
       <ion-card-title>{{x.destination}}</ion-card-title>
     </ion-card-header>
     <div *ngFor='let m of x.estimate'>
-      <ion-item-divider></ion-item-divider>
-      <ion-card-content class="black">Estimate</ion-card-content>
-      <ion-card-content>Minutes:{{m.minutes}}</ion-card-content>
-      <ion-card-content>Platform:{{m.platform}}</ion-card-content>
-      <ion-card-content>Direction:{{m.direction}}</ion-card-content>
-      <ion-card-content>Delay:{{m.delay}}</ion-card-content>
+      <ion-item-divider>Estimate</ion-item-divider>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card-content>Minutes:{{m.minutes}}</ion-card-content>
+          </ion-col>
+          <ion-col>
+            <ion-card-content>Platform:{{m.platform}}</ion-card-content>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card-content>Direction:{{m.direction}}</ion-card-content>
+          </ion-col>
+          <ion-col>
+            <ion-card-content>Delay:{{m.delay}}</ion-card-content>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-card-content class="{{m.color}}">Rail Color:{{m.color}}</ion-card-content>
+        </ion-row>
+      </ion-grid>
     </div>
   </ion-card>
 </ion-content>
