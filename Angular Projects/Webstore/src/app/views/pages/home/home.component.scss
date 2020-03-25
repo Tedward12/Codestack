@@ -1,0 +1,30 @@
+.bgOrange{
+    background-color: orange;
+    border-left: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}
+.bgWhite{
+    background-color: white;
+    border-right: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}
+.size15{
+    font-size: 15px;
+}
+.cart:hover{
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+}
+strong{
+    font-size: 15px;
+}
+.btn{
+    color: white;
+}
+.btn:hover{
+    color: gray;
+}

@@ -1,0 +1,41 @@
+<h1 class="pokemon ml-5 mb-5">Sign Up</h1>
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col pokemon mt-5">
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Username</p>
+                <input #un class="size20" type="text" placeholder="">
+            </div>
+            <div class="row inRow">
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">First Name</p>
+                    <input #fn class="size20" type="text" placeholder="">
+                </div>
+                <div class="col-6 ui-inputgroup d-flex column">
+                    <p class="mb-0 size20">Last Name</p>
+                    <input #ln class="size20" type="text" placeholder="">
+                </div>
+            </div>
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Email</p>
+                <input #em class="size20" type="email" placeholder="">
+            </div>
+            <div class="ui-inputgroup d-flex column">
+                <p class="mb-0 size20">Confirm Email</p>
+                <input #cem class="size20" type="text" placeholder="">
+            </div>
+            <div class="ui-inputgroup  d-flex column">
+                <p class="mb-0 size20">Password</p>
+                <input #pw class="size20" type="password" placeholder="">
+            </div>
+            <div class="ui-inputgroup  d-flex column mb-3">
+                <p class="mb-0 size20">Confirm Password</p>
+                <input #cpw class="size20" type="password" placeholder="">
+            </div>
+            <button (click)='setLoginInfo(un.value,fn.value,ln.value,em.value,cem.value,pw.value,cpw.value)' routerLink="/profile"
+                type="button" class="btn btn-dark btn-lg btn-block">Create Account</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

@@ -10,8 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CardComponent } from './card/card.component';
 import { ProjectCardComponent } from './projectCard/project-card.component';
@@ -26,8 +24,6 @@ enableProdMode();
     MainComponent,
     HomeComponent,
     AboutMeComponent,
-    ProjectsComponent,
-    LoginComponent,
     PageNotFoundComponent,
     CardComponent,
     ProjectCardComponent

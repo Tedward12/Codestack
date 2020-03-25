@@ -1,0 +1,18 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{product.pName}}</h4>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <p for="">{{product.pDesc}}</p>
+                <p>{{product.additionalInfo}}</p>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
+    </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>

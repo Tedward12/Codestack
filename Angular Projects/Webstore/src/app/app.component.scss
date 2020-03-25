@@ -1,0 +1,27 @@
+.leftBG{
+    background-image: url("/Webstore/assets/images/leftController.png");
+    background-color: #1336C7;
+    min-height: 100vh;
+    background-size: cover;
+}
+.rightBG{
+    background-image: url("/Webstore/assets/images/rightController.png");
+    background-color: #E21E1E;
+    min-height: 100vh;
+    background-size: cover;
+}
+.bgBlack{
+    background-color: black;
+}
+.bgOrange{
+    background-color: purple;
+    border-left: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}
+.bgWhite{
+    background-color: white;
+    border-right: black 10px solid;
+    border-top: black 10px solid;
+    border-bottom: black 10px solid;
+}

@@ -1,9 +1,7 @@
 <div class="container-fluid background">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 center">
-            <app-login></app-login>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex justify-content-center align-items-stretch py-3" *ngFor='let project of projects'>
+            <app-project-card class="d-flex align-items-stretch" [projectCard]="project"></app-project-card>
         </div>
-        <div class="col-4"></div>
     </div>
 </div>

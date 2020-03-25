@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor='let item of productList' class="col-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/ninjaStar.jpg" height="100%" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.pName}}</h5>
+                            <p class="card-text">{{item.pDesc}}</p>
+                            <p class="card-text"><small class="text-muted">{{item.additionalInfo}}</small></p>
+                            <button routerLink='/{{item.pNameURL}}/{{item.id}}' class="btn btn-success">{{item.price}}</button>
+                            <app-modal [product] = 'item'></app-modal>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

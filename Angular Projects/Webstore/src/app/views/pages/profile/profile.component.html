@@ -1,0 +1,36 @@
+<div class="d-flex inRow mb-5">
+    <h1 class="pokemon ml-5">Profile</h1>
+    <img routerLink="/cart" routerLinkActive="active" alt="cart" class="ml-auto cart" height="60px" src="assets/images/cart.png">
+</div>
+<div class="container pokemon size20">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+            <div class="inRow mb-3">
+                <p>{{loginInfo.username}}</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+            </div>
+            <div class="inRow mb-3">
+                <p>{{loginInfo.fName}}</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+                <p>{{loginInfo.lName}}</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+            </div>
+            <div class="inRow mb-3">
+                <p>Edit Password</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+            </div>
+            <div class="inRow mb-3">
+                <p>{{loginInfo.email}}</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+            </div>
+            <div class="inRow mb-3">
+                <p>{{loginInfo.sAddress}}</p>
+                <img src="assets/images/edit.png" height="15px" alt="">
+            </div>
+            <div class="button inRow mb-3">
+                <p>Log Out</p>
+            </div>
+        </div>
+    </div>
+</div>

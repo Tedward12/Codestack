@@ -1,0 +1,18 @@
+<div class="d-flex inRow">
+    <h1 class="pokemon ml-5">Pokeballs</h1>
+    <img routerLink="/cart" routerLinkActive="active" alt="cart" class="ml-auto cart" height="60px" src="assets/images/cart.png">
+</div>
+<div class="container-fluid pokemon">
+    <p-scrollPanel [style]="{width: '100%', height: '90vh'}">
+        <div class="row mt-5 pokemon">
+            <div *ngFor='let pokeball of pokeballs' class="col-4 mb-5">
+                <strong class="card-title text-center d-flex justify-content-center">{{pokeball.pName}}</strong>
+                <div class="d-flex justify-content-center">
+                    <img src="{{pokeball.img}}" class="" alt="...">
+                </div>
+                <p class="card-text d-flex justify-content-center">{{pokeball.price}}</p>
+                <a (click) = 'addToCart(pokeball)' class="btn btn-dark d-flex justify-content-center"><strong>Add to Cart</strong></a>
+            </div>
+        </div>
+    </p-scrollPanel>
+</div>

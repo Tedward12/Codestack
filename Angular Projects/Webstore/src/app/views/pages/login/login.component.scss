@@ -1,0 +1,27 @@
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.column{
+    display: flex;
+    flex-direction: column
+}
+.inRow{
+    display: flex;
+    flex-direction: row;
+}
+.size10{
+    font-size: 15px;
+}
+.ui-inputgroup{
+    font-size: 20px;
+}
+.mt-6{
+    margin-top: 250px;
+}
+.button:hover{
+    color: blue;
+    cursor: pointer;
+}
