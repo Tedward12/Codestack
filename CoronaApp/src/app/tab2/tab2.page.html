@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Countries
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Countries</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchCountry" (keypress)="getCountry($event)" autocomplete="off"></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-card *ngFor="let country of countries">
+    <ion-card-header>
+      <ion-card-title>{{country.country}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>Cases: {{country.cases | number}} | Today: {{country.todayCases | number}} | Active: {{country.active | number}}<br>
+      Deaths: {{country.deaths | number}} | Today: {{country.todayDeaths | number}}<br>
+      Recovered: {{country.recovered | number}} | Critical {{country.critical | number}}</ion-card-content>
+  </ion-card>
+
+</ion-content>

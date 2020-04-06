@@ -1,0 +1,7 @@
+{
+  "name": "CoronaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
