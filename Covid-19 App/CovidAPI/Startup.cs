@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CovidAPI.Services;
+using CovidAPI.Services.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,20 @@ namespace CovidAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<DataService>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                builder => builder.WithOrigins("http://localhost:4444"
+                )
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowCredentials());
+            });
+
+            // var connectionString = Configuration.GetConnectionString("NameOfMyConnectionString"); // from app settings
+            // services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,16 +52,18 @@ namespace CovidAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
-            app.UseRouting();
+            // app.UseCors("CorsPolicy");
 
-            app.UseAuthorization();
+            // app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            // app.UseAuthorization();
+
+            // app.UseEndpoints(endpoints =>
+            // {
+            //     endpoints.MapControllers();
+            // });
         }
     }
 }
