@@ -11,7 +11,7 @@ namespace CovidAPI.Services
             new updateInfo{
                 title = "Covid-19 patients recovering quickly after getting experimental drug remdesivir",
                 body = "Covid-19 patients who are getting an experimental drug called remdesivir have been recovering quickly, with most going home in days, STAT News reported Thursday after it obtained a video of a conversation about the trial.",
-                date = DateTime.Now
+                date = DateTime.Now.Date
             }
         };
 

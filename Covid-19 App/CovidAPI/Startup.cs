@@ -54,16 +54,16 @@ namespace CovidAPI
 
             //app.UseHttpsRedirection();
 
-            // app.UseCors("CorsPolicy");
+            app.UseCors("CorsPolicy");
 
-            // app.UseRouting();
+            app.UseRouting();
 
-            // app.UseAuthorization();
+            app.UseAuthorization();
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllers();
-            // });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
