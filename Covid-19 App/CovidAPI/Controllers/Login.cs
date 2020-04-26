@@ -15,12 +15,12 @@ namespace CovidAPI.Controllers
     public class LoginController : ControllerBase
     {
         private readonly DataService _fixedLogin;
-        // private readonly DataServiceSql _sqlLogin;
+        private readonly DataServiceSql _sqlLogin;
 
-        public LoginController(DataService fixedLogin)
+        public LoginController(DataService fixedLogin, DataServiceSql sqlLogin)
         {
             _fixedLogin = fixedLogin;
-            // _sqlLogin = sqlLogin;
+            _sqlLogin = sqlLogin;
         }
 
         [HttpGet]

@@ -29,10 +29,11 @@ namespace CovidAPI
         {
             services.AddControllers();
             services.AddScoped<DataService>();
+            services.AddScoped<DataServiceSql>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                builder => builder.WithOrigins("http://localhost:4444"
+                builder => builder.WithOrigins("http://localhost:4200"
                 )
                             .AllowAnyHeader()
                             .AllowAnyMethod()

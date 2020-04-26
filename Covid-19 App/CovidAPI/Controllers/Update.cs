@@ -15,12 +15,12 @@ namespace CovidAPI.Controllers
     public class UpdateController : ControllerBase
     {
         private readonly DataService _fixedUpdate;
-        // private readonly DataServiceSql _sqlUpdate;
+        private readonly DataServiceSql _sqlUpdate;
 
-        public UpdateController(DataService fixedUpdate)
+        public UpdateController(DataService fixedUpdate, DataServiceSql sqlUpdate)
         {
             _fixedUpdate = fixedUpdate;
-            // _sqlUpdate = sqlUpdate;
+            _sqlUpdate = sqlUpdate;
         }
 
         [HttpGet]
